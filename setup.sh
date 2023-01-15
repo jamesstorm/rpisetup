@@ -36,6 +36,8 @@ sudo snap install core
 #Neovim
 sudo snap install nvim --edge --classic
 echo "REMINDER!!! You need to add /snap/bin to path at the top of .zshrc"
+git clone --depth 1 https://github.com/wbthomason/packer.nvim  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+gh repo clone jamesstorm/nvim /home/$USERNAME/.config/nvim
 
 #Github CLI
 curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
