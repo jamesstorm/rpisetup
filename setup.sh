@@ -6,24 +6,33 @@ USERNAME=pi
 sudo apt update
 sudo apt upgrade -y
 
-# ZSH
 sudo apt install \
   apt-transport-https \
   ca-certificates \
   software-properties-common \
-  zsh \ 
+  zsh \
   cockpit \
   screenfetch \
+  snapd \
+  core \
   -y
 
-#OhMyZSH
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+chsh -s $(which zsh)
+# ZSH - oh-my-zsh
+echo "on-my-zsh"
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# Powerlevel10k ZSH Theme
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+#zsh-autosuggestions plugin
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 
 #Snap - so that I can install the latest nvim
 
-sudo apt install snapd
-echo "REMINDER!!! You might need to reboot and run again because snap"
-sudo snap install core
+#sudo apt install snapd
+#echo "REMINDER!!! You might need to reboot and run again because snap"
+#sudo snap install core
 
 #Neovim
 sudo snap install nvim --edge --classic
