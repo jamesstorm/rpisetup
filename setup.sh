@@ -14,7 +14,6 @@ sudo apt install \
   cockpit \
   screenfetch \
   snapd \
-  core \
   -y
 
 
@@ -32,7 +31,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/p
 
 #sudo apt install snapd
 #echo "REMINDER!!! You might need to reboot and run again because snap"
-#sudo snap install core
+sudo snap install core
 
 #Neovim
 sudo snap install nvim --edge --classic
