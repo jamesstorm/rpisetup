@@ -8,6 +8,9 @@ sudo apt upgrade -y
 
 # ZSH
 sudo apt install \
+  apt-transport-https \
+  ca-certificates \
+  software-properties-common \
   zsh \ 
   cockpit \
   screenfetch \
