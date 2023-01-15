@@ -9,7 +9,7 @@ sudo apt upgrade -y
 # ZSH
 sudo apt install \
   zsh \ 
-  copilot \
+  cockpit \
   screenfetch \
   -y
 
