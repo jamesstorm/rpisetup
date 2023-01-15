@@ -45,7 +45,7 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githu
 sudo apt update
 sudo apt install gh -y
 gh auth login
-gh repo clone jamesstorm/prime /home/$USERNAME/prime
+
 
 screenfetch
 
