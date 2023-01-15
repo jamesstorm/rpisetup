@@ -7,7 +7,11 @@ sudo apt update
 sudo apt upgrade -y
 
 # ZSH
-sudo apt install zsh -y
+sudo apt install \
+  zsh \ 
+  copilot \
+  screenfetch \
+  -y
 
 #OhMyZSH
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -31,9 +35,6 @@ sudo apt install gh -y
 gh auth login
 gh repo clone jamesstorm/prime /home/$USERNAME/prime
 
-
-#Screenfetch
-sudo apt install screenfetch
 screenfetch
 
 
