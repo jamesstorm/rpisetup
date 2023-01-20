@@ -14,18 +14,28 @@ sudo apt install \
   cockpit \
   screenfetch \
   snapd \
+  tmux \
   -y
 
 
+
+# ZSH
+#
+echo "ZSH"
+sudo apt install zsh -y
 chsh -s $(which zsh)
 # ZSH - oh-my-zsh
 echo "on-my-zsh"
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+#sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 # Powerlevel10k ZSH Theme
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 #zsh-autosuggestions plugin
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+wget https://github.com/jamesstorm/prime/blob/afb4c65ef5906df460490f5abb50c69daf8d4e5a/.zshrc
+ln -f ~/rpisetup/.zshrc ~/.zshrc
+
 
 #Snap - so that I can install the latest nvim
 
